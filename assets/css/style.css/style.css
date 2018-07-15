@@ -1,0 +1,57 @@
+h1 {
+    background-color: rgba(235, 176, 14, 0.795);
+    color: whitesmoke;
+    padding: 40px;
+    margin-bottom: 30px;
+    width: 40%;
+    text-align: center;
+  
+}
+
+#wrapper {
+    background-color: rgba(179, 245, 218, 0.247);
+    width: 100%;
+}
+
+#numbertoguess {
+    background-color: rgb(20, 233, 162);
+    float: left;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#gamerules {
+    clear: both;
+    background-color: rgb(240, 239, 234);
+    width: 40%;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+#gamescore {
+    background-color: rgb(89, 153, 236); 
+    padding: 15px 20px 10px 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 10%;
+    float: left;
+}
+
+.row_text_center {
+    clear: both;
+    background-color: rgb(240, 245, 233);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 20%;
+    float: left;
+
+}
+
+#totalScore {
+     clear: both;
+     background-color: rgb(180, 70, 79);
+     margin-bottom: 70px;
+     padding-bottom: 20px;
+     width: 20%;
+}
