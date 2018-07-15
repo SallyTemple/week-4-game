@@ -76,6 +76,8 @@ h1 {
   background-color: white;
   border: solid;
   border-color: lightblue;
+  transform: rotate(-90deg);
+
 }
 #score-number {
     font-size: 1.5vw;
