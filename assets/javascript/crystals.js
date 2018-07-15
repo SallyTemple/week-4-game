@@ -42,30 +42,35 @@ $(document).ready(function() {
   
     // Function that resets the game.
     function setGame() {
+
       // Make our current total number 0.
       yourMatchingNumber = 0;
+
       // Generate random crystal values.
       crystals = randomNumCrystals();
+
       // Generate a random target number and render it to the page.
       randomNum = randomNumGen();
-      $("#random-area").text(randomNum);
+      $("#numbertoguess").text(randomNum);
     }
   
     // Function that handles updating the page.
     function updateDom(didUserWin) {
-      $("#win-area").empty();
+      $("#gamescore").empty();
   
       // If the user won...
       if (didUserWin === true) {
+
         // Show victory message, restart the game, and render the new "current guess" number.
-        $("#win-area").append($("<p>").text("You won!!"));
+        $("#gamescore").append($("<p>").text("You won!!"));
         setGame();
         renderMatchingNumber();
       }
       // If the user lost...
       else if (didUserWin === false) {
+          
         // Show defeat message, restart the game, and render the new "current guess" number.
-        $("#win-area").append($("<p>").text("You lost!!"));
+        $("#gamescore").append($("<p>").text("You lost!!"));
         setGame();
         renderMatchingNumber();
       }
@@ -80,8 +85,8 @@ $(document).ready(function() {
       pWins.append(wSpan);
       pLosses.append(lSpan);
   
-      $("#win-area").append(pWins);
-      $("#win-area").append(pLosses);
+      $("#gamescore").append(pWins);
+      $("#gamescore").append(pLosses);
     }
   
     // Function to render our crystals to the page.
@@ -90,7 +95,7 @@ $(document).ready(function() {
         var crystalDiv = $("<div class='crystals-button' data-name='" + key + "'>");
         var crystalImg = $("<img alt='image' class='crystal-img'>").attr("src", crystals[key].imageUrl);
         crystalDiv.append(crystalImg);
-        $("#crystal-area").append(crystalDiv);
+        $("#crystalball").append(crystalDiv);
       }
     }
   
@@ -103,8 +108,8 @@ $(document).ready(function() {
     // Function that will render your "current guess" number to the page.
     function renderMatchingNumber() {
       var scoreNumDiv = $("<div id='score-number'>").text(yourMatchingNumber);
-      $("#score-area").html();
-      $("#score-area").html(scoreNumDiv);
+      $("#totalScore").html();
+      $("#totalScore").html(scoreNumDiv);
     }
   
     // Call our functions to start the game!
